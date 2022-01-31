@@ -1,0 +1,81 @@
+$cor-principal: greenyellow;
+$bg:black;
+@for $i from 1 through 3{
+	.item-#{$i}{
+		background: $bg;
+		color: $cor-principal;
+		margin-top: 2px;
+		padding: 5px;
+		text-align: center;
+		width: 50%;
+	}
+}
+/*Mixin*/
+@mixin titulo($cor:white, $cor-bg:black){
+    color: $cor;
+    background:$cor-bg;
+    padding: 10px 8px;
+    margin: 10px 10px;
+    border-radius:10px;
+}
+h1{
+    @include titulo(red, black);  
+}
+h2{
+    @include titulo(black, red);
+}
+h3{
+    @include titulo(red,green);
+}
+h4{
+    @include titulo(yellow, blue);
+}
+h5{
+    @include titulo(#eee, red);
+}
+h6{
+    @include titulo(black, greenyellow);
+}
+%pai1{
+    color:red;
+}
+%filho{
+    //@extend %pai;
+    color:red;
+    background:black;
+}
+.erro{
+    @extend %filho;
+}
+//diretivas de controle
+$cor: red;
+@if($cor == green){
+    p{
+        color:$cor;
+    }
+}@else if($cor == red){
+    p{
+        color:$cor;
+    }
+}@else{
+    p{
+        color: black;
+    }
+}
+//diretivas de controle e mixins
+$tema: natal;
+@mixin tema($tema){
+    @if($tema == natal){
+        background:red;
+        color:white;
+    }@else if($tema == blackfriday){
+        background:black;
+        color:yellow;
+    }@else{
+        background:white;
+        color:white;
+    }
+}
+body{
+    @include tema(blackfriday);
+}

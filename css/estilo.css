@@ -1,0 +1,91 @@
+.item-1 {
+  background: black;
+  color: greenyellow;
+  margin-top: 2px;
+  padding: 5px;
+  text-align: center;
+  width: 50%;
+}
+
+.item-2 {
+  background: black;
+  color: greenyellow;
+  margin-top: 2px;
+  padding: 5px;
+  text-align: center;
+  width: 50%;
+}
+
+.item-3 {
+  background: black;
+  color: greenyellow;
+  margin-top: 2px;
+  padding: 5px;
+  text-align: center;
+  width: 50%;
+}
+
+/*Mixin*/
+h1 {
+  color: red;
+  background: black;
+  padding: 10px 8px;
+  margin: 10px 10px;
+  border-radius: 10px;
+}
+
+h2 {
+  color: black;
+  background: red;
+  padding: 10px 8px;
+  margin: 10px 10px;
+  border-radius: 10px;
+}
+
+h3 {
+  color: red;
+  background: green;
+  padding: 10px 8px;
+  margin: 10px 10px;
+  border-radius: 10px;
+}
+
+h4 {
+  color: yellow;
+  background: blue;
+  padding: 10px 8px;
+  margin: 10px 10px;
+  border-radius: 10px;
+}
+
+h5 {
+  color: #eee;
+  background: red;
+  padding: 10px 8px;
+  margin: 10px 10px;
+  border-radius: 10px;
+}
+
+h6 {
+  color: black;
+  background: greenyellow;
+  padding: 10px 8px;
+  margin: 10px 10px;
+  border-radius: 10px;
+}
+
+.erro {
+  color: red;
+  background: black;
+}
+
+p {
+  color: red;
+}
+
+body {
+  background: black;
+  color: yellow;
+}
+
+/*# sourceMappingURL=estilo.css.map */

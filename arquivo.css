@@ -1,0 +1,17 @@
+h1 {
+  color: red;
+  background: greenyellow !important;
+}
+
+h2 {
+  color: red;
+  font-size: 10px;
+  background: green;
+}
+
+h3 {
+  color: greenyellow;
+  background: blue;
+}
+
+/*# sourceMappingURL=arquivo.css.map */

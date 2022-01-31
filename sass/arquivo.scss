@@ -1,0 +1,101 @@
+$cor: blue;
+$bg: red;
+$tamanho-titulo: 30px;
+$cor_h1: greenyellow;
+$h1_rodape: orange;
+$h2_rodape: red;
+$bg_rodape: #eee;
+h1{
+    color:$cor;
+    font-size:$tamanho_titulo;
+}
+#conteudo{
+    background:$bg;
+    padding:15px;
+    h1,h2{
+        color:$cor_h1;
+    }
+    a{
+        color:green;
+        /*Referenciamento do seletor pai */
+        &:hover{
+            background: yellow;
+            padding: 2px;
+        }
+    }
+}
+#rodape{
+    h1{
+        $h1_rodape: green;
+        color:$h1_rodape;
+    }
+    h2{
+        color:$h2_rodape;
+    }
+    background:$bg_rodape;
+}
+/*Interpolação */
+$classe: red;
+$color: color ;
+
+.red{
+    #{$color}:$classe;
+}
+//for
+// to ou through
+
+@for $i from 1 through 3{
+    //.item-#{$i}{
+     //  background:green;
+       // margin-bottom: 2px;
+    }
+}
+// while
+
+$contador:1;
+@while ($contador < 5){
+     .item-#{$contador}{
+        color:red;
+        margin-top: 2px;
+    }
+    $contador:$contador + 1;
+}
+//lista
+//each
+$lista: green, yellow,red;
+$contador: 1;
+@each $cor in $lista{
+   
+    .item-#{$contador}{
+        background: $cor;
+        margin: 5px 5px;
+        padding: 10px 10px;
+    }
+    $contador: $contador +1;
+}
+$total: 12;
+@function largura-coluna($coluna){
+    @return percentage($coluna/$total)
+}
+@for $i from 1 through $total{
+    .col-#{$i}{
+        width: largura-coluna($i);
+        background:greenyellow;
+    }
+}
+$resultado: largura-coluna(12);
+/*
+#{$resultado}
+*/
+.alerta{
+    background: mix(green, orange, 35%);
+    color:yellow;
+}
+.alerta1{
+    background: darken(greenyellow,15);
+    color:yellow;
+}
+.alerta2{
+    background: lighten(green,15);
+    color:yellow;
+}

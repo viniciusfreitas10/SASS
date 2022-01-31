@@ -1,0 +1,17 @@
+$cor: red;
+$cor2: green;
+$cor_h3: greenyellow;
+$bg_h3: blue;
+h1{
+	color: $cor;
+	background: greenyellow !important;
+}
+h2{
+	color: $cor;
+	font-size: 10px;
+	background: $cor2;
+}
+h3{
+	color: $cor_h3;
+	background: $bg_h3;
+}
